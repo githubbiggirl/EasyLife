@@ -16,4 +16,8 @@
 
 @property (nonatomic, weak) id<CitysViewdelegate> citysDelegate;
 
+@property (nonatomic, strong) NSArray *provincesAndCities;
+@property (nonatomic, strong) NSArray *Cities;
+
+
 @end

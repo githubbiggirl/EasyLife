@@ -47,7 +47,10 @@
 		CCD381C21C4144170009E867 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD381B41C4144170009E867 /* NSObject+MJCoding.m */; };
 		CCD381C31C4144170009E867 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD381B61C4144170009E867 /* NSObject+MJKeyValue.m */; };
 		CCD381C41C4144170009E867 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD381B81C4144170009E867 /* NSObject+MJMember.m */; };
+		CCD6D9321C4517D200C36F88 /* LLNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD6D9301C4517D200C36F88 /* LLNewsViewController.m */; };
+		CCD6D9331C4517D200C36F88 /* LLNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCD6D9311C4517D200C36F88 /* LLNewsViewController.xib */; };
 		CCEB5D811C4257690028EC84 /* UIImage+WB.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEB5D801C4257690028EC84 /* UIImage+WB.m */; };
+		CCEB5D841C4286FE0028EC84 /* CityResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEB5D831C4286FE0028EC84 /* CityResultTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,8 +152,13 @@
 		CCD381B61C4144170009E867 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
 		CCD381B71C4144170009E867 /* NSObject+MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJMember.h"; sourceTree = "<group>"; };
 		CCD381B81C4144170009E867 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
+		CCD6D92F1C4517D200C36F88 /* LLNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLNewsViewController.h; sourceTree = "<group>"; };
+		CCD6D9301C4517D200C36F88 /* LLNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLNewsViewController.m; sourceTree = "<group>"; };
+		CCD6D9311C4517D200C36F88 /* LLNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLNewsViewController.xib; sourceTree = "<group>"; };
 		CCEB5D7F1C4257690028EC84 /* UIImage+WB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WB.h"; sourceTree = "<group>"; };
 		CCEB5D801C4257690028EC84 /* UIImage+WB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WB.m"; sourceTree = "<group>"; };
+		CCEB5D821C4286FE0028EC84 /* CityResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityResultTableViewController.h; sourceTree = "<group>"; };
+		CCEB5D831C4286FE0028EC84 /* CityResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityResultTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,13 +258,14 @@
 				CCD380FC1C40922E0009E867 /* category */,
 				CC645BCE1C3FE5F000888C67 /* ThirdSource */,
 				CC645BCA1C3FE36C00888C67 /* httoTool */,
-				CCBEC1D61C3FA03400515E42 /* AppDelegate.h */,
-				CCBEC1D71C3FA03400515E42 /* AppDelegate.m */,
 				CCBEC1DC1C3FA03400515E42 /* Main.storyboard */,
 				CCD3816B1C40D07F0009E867 /* Models */,
-				CCD381051C409AAE0009E867 /* Controllers */,
 				CCD381041C409A960009E867 /* Views */,
+				CCD6D92E1C45179B00C36F88 /* CityWeatherVC */,
+				CCD381051C409AAE0009E867 /* Controllers */,
 				CCBEC1DF1C3FA03400515E42 /* Assets.xcassets */,
+				CCBEC1D61C3FA03400515E42 /* AppDelegate.h */,
+				CCBEC1D71C3FA03400515E42 /* AppDelegate.m */,
 				CCBEC1E11C3FA03400515E42 /* LaunchScreen.storyboard */,
 				CCBEC1E41C3FA03400515E42 /* Info.plist */,
 				CCBEC1D31C3FA03400515E42 /* Supporting Files */,
@@ -321,10 +330,7 @@
 			children = (
 				CCBEC1D91C3FA03400515E42 /* ViewController.h */,
 				CCBEC1DA1C3FA03400515E42 /* ViewController.m */,
-				CC645BEF1C3FF05500888C67 /* WeatherViewController.h */,
-				CC645BF01C3FF05500888C67 /* WeatherViewController.m */,
-				CCD381991C412E150009E867 /* cityTableViewController.h */,
-				CCD3819A1C412E150009E867 /* cityTableViewController.m */,
+				CCD6D9341C4517DB00C36F88 /* NewsVC */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -377,6 +383,29 @@
 				CCD381B81C4144170009E867 /* NSObject+MJMember.m */,
 			);
 			name = MJExtension;
+			sourceTree = "<group>";
+		};
+		CCD6D92E1C45179B00C36F88 /* CityWeatherVC */ = {
+			isa = PBXGroup;
+			children = (
+				CC645BEF1C3FF05500888C67 /* WeatherViewController.h */,
+				CC645BF01C3FF05500888C67 /* WeatherViewController.m */,
+				CCD381991C412E150009E867 /* cityTableViewController.h */,
+				CCD3819A1C412E150009E867 /* cityTableViewController.m */,
+				CCEB5D821C4286FE0028EC84 /* CityResultTableViewController.h */,
+				CCEB5D831C4286FE0028EC84 /* CityResultTableViewController.m */,
+			);
+			name = CityWeatherVC;
+			sourceTree = "<group>";
+		};
+		CCD6D9341C4517DB00C36F88 /* NewsVC */ = {
+			isa = PBXGroup;
+			children = (
+				CCD6D92F1C4517D200C36F88 /* LLNewsViewController.h */,
+				CCD6D9301C4517D200C36F88 /* LLNewsViewController.m */,
+				CCD6D9311C4517D200C36F88 /* LLNewsViewController.xib */,
+			);
+			name = NewsVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,6 +516,7 @@
 				CCBEC1E31C3FA03400515E42 /* LaunchScreen.storyboard in Resources */,
 				CCBEC1E01C3FA03400515E42 /* Assets.xcassets in Resources */,
 				CCBEC1DE1C3FA03400515E42 /* Main.storyboard in Resources */,
+				CCD6D9331C4517D200C36F88 /* LLNewsViewController.xib in Resources */,
 				CCD381941C4127C00009E867 /* Cities.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +555,7 @@
 				CC645BE81C3FE60D00888C67 /* AFURLConnectionOperation.m in Sources */,
 				CCD381BB1C4144170009E867 /* MJConst.m in Sources */,
 				CC645BE31C3FE60D00888C67 /* AFHTTPRequestOperation.m in Sources */,
+				CCD6D9321C4517D200C36F88 /* LLNewsViewController.m in Sources */,
 				CCD3816E1C40D0D90009E867 /* WeatherInfo.m in Sources */,
 				CCBEC1D51C3FA03400515E42 /* main.m in Sources */,
 				CCD381C31C4144170009E867 /* NSObject+MJKeyValue.m in Sources */,
@@ -535,6 +566,7 @@
 				CCD381BF1C4144170009E867 /* MJMethod.m in Sources */,
 				CC645BE51C3FE60D00888C67 /* AFHTTPSessionManager.m in Sources */,
 				CC645BE61C3FE60D00888C67 /* AFNetworkReachabilityManager.m in Sources */,
+				CCEB5D841C4286FE0028EC84 /* CityResultTableViewController.m in Sources */,
 				CC645BEA1C3FE60D00888C67 /* AFURLResponseSerialization.m in Sources */,
 				CCD381C21C4144170009E867 /* NSObject+MJCoding.m in Sources */,
 				CC645BEB1C3FE60D00888C67 /* AFURLSessionManager.m in Sources */,

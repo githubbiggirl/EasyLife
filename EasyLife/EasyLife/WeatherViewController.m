@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *weatherLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *weatherImageView;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *qualityLabel;
 
 @property (nonatomic, strong) NSArray *simpleWeathers;
 
@@ -156,6 +157,7 @@
     
     self.cityLabel.text = self.weatherinfo.currentCity;
     self.dateLabel.text = self.weatherinfo.date;
+    self.qualityLabel.text = self.weatherinfo.pm25;
     self.weekLabel.text = [weatherData.date substringToIndex:3];
     self.temperatureLabel.text = weatherData.temperature;
     NSString *weather = weatherData.weather;

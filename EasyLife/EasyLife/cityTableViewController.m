@@ -7,9 +7,10 @@
 //
 
 #import "cityTableViewController.h"
+#import "CityResultTableViewController.h"
 
 @interface cityTableViewController ()
-@property (nonatomic, strong) NSArray *provincesAndCities;
+@property (nonatomic, strong) UISearchController *searchController;
 @end
 
 @implementation cityTableViewController
@@ -17,14 +18,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(presentViewController:)];
+    
     self.title = @"选择城市";
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem alloc];
     
+    CityResultTableViewController *resultTVC = [[CityResultTableViewController alloc]initWithStyle:UITableViewStylePlain];
+//    resultTVC.Citydatas = self.provincesAndCities;
+    resultTVC.cities = self.provincesAndCities;
+    _searchController = [[UISearchController alloc]initWithSearchResultsController:resultTVC];
+    
+    _searchController.searchResultsUpdater = resultTVC;
+    _searchController.hidesNavigationBarDuringPresentation = YES;
+    _searchController.dimsBackgroundDuringPresentation = YES;
+    
+    
+    
+}
+
+- (void)presentViewController:(UIBarButtonItem *)sender
+{
+    [self presentViewController:_searchController animated:YES completion:nil];
 }
 
 - (NSArray *)provincesAndCities
@@ -61,8 +76,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     NSDictionary *citysDic = self.provincesAndCities[indexPath.section];
-    NSArray *citys = citysDic[@"Cities"];
-    NSDictionary *cityInfoDic = citys[indexPath.row];
+    _Cities = citysDic[@"Cities"];
+    NSDictionary *cityInfoDic = _Cities[indexPath.row];
     cell.textLabel.text = cityInfoDic[@"city"];
     
     return cell;
@@ -79,8 +94,8 @@
 {
     NSDictionary *citysDic = self.provincesAndCities[indexPath.section];
     //一个省中城市的集合
-    NSArray *citys = citysDic[@"Cities"];
-    NSDictionary *cityInfoDic = citys[indexPath.row];
+   _Cities = citysDic[@"Cities"];
+    NSDictionary *cityInfoDic = _Cities[indexPath.row];
     //读取到每一个城市
     NSString *city = cityInfoDic[@"city"];
     if ([_citysDelegate respondsToSelector:@selector(citysViewDidSelectedCity:)]) {
