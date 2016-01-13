@@ -259,11 +259,11 @@
 				CC645BCE1C3FE5F000888C67 /* ThirdSource */,
 				CC645BCA1C3FE36C00888C67 /* httoTool */,
 				CCBEC1DC1C3FA03400515E42 /* Main.storyboard */,
-				CCD3816B1C40D07F0009E867 /* Models */,
-				CCD381041C409A960009E867 /* Views */,
-				CCD6D92E1C45179B00C36F88 /* CityWeatherVC */,
-				CCD381051C409AAE0009E867 /* Controllers */,
+				CCD6D9351C45303E00C36F88 /* AboutWeather */,
+				CCD6D9361C4532C000C36F88 /* AboutNews */,
 				CCBEC1DF1C3FA03400515E42 /* Assets.xcassets */,
+				CCBEC1D91C3FA03400515E42 /* ViewController.h */,
+				CCBEC1DA1C3FA03400515E42 /* ViewController.m */,
 				CCBEC1D61C3FA03400515E42 /* AppDelegate.h */,
 				CCBEC1D71C3FA03400515E42 /* AppDelegate.m */,
 				CCBEC1E11C3FA03400515E42 /* LaunchScreen.storyboard */,
@@ -323,16 +323,6 @@
 				CCD3810B1C409D5A0009E867 /* simpleWeatherView.xib */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		CCD381051C409AAE0009E867 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				CCBEC1D91C3FA03400515E42 /* ViewController.h */,
-				CCBEC1DA1C3FA03400515E42 /* ViewController.m */,
-				CCD6D9341C4517DB00C36F88 /* NewsVC */,
-			);
-			name = Controllers;
 			sourceTree = "<group>";
 		};
 		CCD3816B1C40D07F0009E867 /* Models */ = {
@@ -406,6 +396,24 @@
 				CCD6D9311C4517D200C36F88 /* LLNewsViewController.xib */,
 			);
 			name = NewsVC;
+			sourceTree = "<group>";
+		};
+		CCD6D9351C45303E00C36F88 /* AboutWeather */ = {
+			isa = PBXGroup;
+			children = (
+				CCD3816B1C40D07F0009E867 /* Models */,
+				CCD381041C409A960009E867 /* Views */,
+				CCD6D92E1C45179B00C36F88 /* CityWeatherVC */,
+			);
+			name = AboutWeather;
+			sourceTree = "<group>";
+		};
+		CCD6D9361C4532C000C36F88 /* AboutNews */ = {
+			isa = PBXGroup;
+			children = (
+				CCD6D9341C4517DB00C36F88 /* NewsVC */,
+			);
+			name = AboutNews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

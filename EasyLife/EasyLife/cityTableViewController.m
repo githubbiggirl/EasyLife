@@ -104,6 +104,14 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+//索引
+-(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableVie
+{
+    
+    return _Cities;
+}
+
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

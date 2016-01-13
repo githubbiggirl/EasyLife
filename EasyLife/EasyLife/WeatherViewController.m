@@ -158,6 +158,7 @@
     self.cityLabel.text = self.weatherinfo.currentCity;
     self.dateLabel.text = self.weatherinfo.date;
     self.qualityLabel.text = self.weatherinfo.pm25;
+    self.windLabel.text = weatherData.wind;
     self.weekLabel.text = [weatherData.date substringToIndex:3];
     self.temperatureLabel.text = weatherData.temperature;
     NSString *weather = weatherData.weather;
